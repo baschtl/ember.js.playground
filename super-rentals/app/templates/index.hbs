@@ -2,5 +2,24 @@
 
 <p>We hope you find exactly what you're looking for in a place to stay.</p>
 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Owner</th>
+    <th>Type</th>
+    <th>Location</th>
+    <th># bedrooms</th>
+  </tr>
+{{#each model as |rental|}}
+  <tr>
+    <td>{{rental.title}}</td>
+    <td>{{rental.owner}}</td>
+    <td>{{rental.type}}</td>
+    <td>{{rental.city}}</td>
+    <td>{{rental.bedrooms}}</td>
+  </tr>
+{{/each}}
+</table>
+
 {{#link-to "about"}}About{{/link-to}}
 {{#link-to "contact"}}Contact us{{/link-to}}
