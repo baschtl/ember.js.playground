@@ -2,6 +2,8 @@
 
 <p>We hope you find exactly what you're looking for in a place to stay.</p>
 
+{{filter-listing filteredList=filteredList autoComplete=(action 'autoComplete') search=(action 'search')}}
+
 <table>
   <tr>
     <th>Title</th>
@@ -10,9 +12,9 @@
     <th>Location</th>
     <th># bedrooms</th>
   </tr>
-{{#each model as |rentalUnit|}}
-  {{rental-listing rental=rentalUnit}}
-{{/each}}
+  {{#each model as |rentalUnit|}}
+    {{rental-listing rental=rentalUnit}}
+  {{/each}}
 </table>
 
 {{#link-to "about"}}About{{/link-to}}
