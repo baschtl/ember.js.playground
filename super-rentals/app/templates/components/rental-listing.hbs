@@ -3,3 +3,8 @@
 <td>{{rental.type}}</td>
 <td>{{rental.city}}</td>
 <td>{{rental.bedrooms}}</td>
+{{#if isImageShowing}}
+  <td><img {{action "imageHide"}} src={{rental.image}} alt="{{rental.type}} - Click to close" title="{{rental.type}} - Click to close" width="200"></td>
+{{else}}
+  <button {{action "imageShow"}}>Show image</button>
+{{/if}}
